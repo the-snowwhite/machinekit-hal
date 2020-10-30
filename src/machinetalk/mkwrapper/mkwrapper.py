@@ -443,6 +443,9 @@ class LinuxCNCWrapper(object):
         self.motion_subscribed = False
         self.motion_full_update = False
         self.motion_first_run = True
+        self.spindle_subscribed = False
+        self.spindle_full_update = False
+        self.spindle_first_run = True
         self.io_subscribed = False
         self.io_full_update = False
         self.io_first_run = True
@@ -975,7 +978,7 @@ class LinuxCNCWrapper(object):
         if self.config_first_run:
             self.status.config.default_acceleration = 0.0
             self.status.config.angular_units = ANGULAR_UNITS_DEGREES
-            self.status.config.axes = 0
+            self.status.config.joints = 0
             self.status.config.axis_mask = 0
             self.status.config.cycle_time = 0.0
             self.status.config.debug = 0
@@ -1141,7 +1144,7 @@ class LinuxCNCWrapper(object):
             name = str(self.ini.find('EMC', 'MACHINE') or '')
             modified |= self.update_config_value('name', name)
 
-        for name in ['axis_mask', 'debug', 'kinematics_type', 'axes']:
+        for name in ['axis_mask', 'debug', 'kinematics_type', 'joints']:
             modified |= self.update_config_value(name, getattr(stat, name))
 
         for name in ['cycle_time']:
@@ -1151,28 +1154,28 @@ class LinuxCNCWrapper(object):
         modified |= self.update_config_float('default_velocity', stat.velocity)
 
         tx_axis = EmcStatusConfigAxis()
-        for index, stat_axis in enumerate(stat.axis):
+        for index, stat_axis in enumerate(stat.joint):
             tx_axis.Clear()
             axis_modified = False
 
-            if index == stat.axes:
+            if index == stat.joints:
                 break
 
-            if len(self.status.config.axis) == index:
-                self.status.config.axis.add()
-                self.status.config.axis[index].index = index
-                self.status.config.axis[index].axis_type = EMC_AXIS_LINEAR
-                self.status.config.axis[index].backlash = 0.0
-                self.status.config.axis[index].max_ferror = 0.0
-                self.status.config.axis[index].max_position_limit = 0.0
-                self.status.config.axis[index].min_ferror = 0.0
-                self.status.config.axis[index].min_position_limit = 0.0
-                self.status.config.axis[index].home_sequence = -1
-                self.status.config.axis[index].max_velocity = 0.0
-                self.status.config.axis[index].max_acceleration = 0.0
-                self.status.config.axis[index].increments = ""
+            if len(self.status.config.joint) == index:
+                self.status.config.joint.add()
+                self.status.config.joint[index].index = index
+                self.status.config.joint[index].joint_type = EMC_AXIS_LINEAR
+                self.status.config.joint[index].backlash = 0.0
+                self.status.config.joint[index].max_ferror = 0.0
+                self.status.config.joint[index].max_position_limit = 0.0
+                self.status.config.joint[index].min_ferror = 0.0
+                self.status.config.joint[index].min_position_limit = 0.0
+                self.status.config.joint[index].home_sequence = -1
+                self.status.config.joint[index].max_velocity = 0.0
+                self.status.config.joint[index].max_acceleration = 0.0
+                self.status.config.joint[index].increments = ""
 
-                axis = self.status.config.axis[index]
+                axis = self.status.config.joint[index]
                 axis_name = 'AXIS_%i' % index
                 value = int(self.ini.find(axis_name, 'HOME_SEQUENCE') or -1)
                 axis_modified |= self.update_proto_value(
@@ -1194,9 +1197,9 @@ class LinuxCNCWrapper(object):
                     axis, tx_axis, 'increments', value
                 )
 
-            axis = self.status.config.axis[index]
+            axis = self.status.config.joint[index]
             axis_modified |= self.update_proto_value(
-                axis, tx_axis, 'axis_type', stat_axis['axisType']
+                axis, tx_axis, 'joint_type', stat_axis['jointType']
             )
 
             for name in [
@@ -1212,7 +1215,7 @@ class LinuxCNCWrapper(object):
 
             if axis_modified:
                 tx_axis.index = index
-                self.status_tx.config.axis.add().CopyFrom(tx_axis)
+                self.status_tx.config.joint.add().CopyFrom(tx_axis)
                 modified = True
 
         del tx_axis
@@ -1468,13 +1471,6 @@ class LinuxCNCWrapper(object):
             self.status.motion.queue = 0
             self.status.motion.queue_full = False
             self.status.motion.rotation_xy = 0.0
-            self.status.motion.spindle_brake = 0
-            self.status.motion.spindle_direction = 0
-            self.status.motion.spindle_enabled = 0
-            self.status.motion.spindle_increasing = 0
-            self.status.motion.spindle_override_enabled = False
-            self.status.motion.spindle_speed = 0.0
-            self.status.motion.spindlerate = 0.0
             self.status.motion.state = UNINITIALIZED_STATUS
             self.status.motion.max_velocity = 0.0
             self.status.motion.max_acceleration = 0.0
@@ -1500,11 +1496,6 @@ class LinuxCNCWrapper(object):
             'probing',
             'queue',
             'queue_full',
-            'spindle_brake',
-            'spindle_direction',
-            'spindle_enabled',
-            'spindle_increasing',
-            'spindle_override_enabled',
             'state',
         ]:
             modified |= self.update_motion_value(name, getattr(stat, name))
@@ -1516,8 +1507,6 @@ class LinuxCNCWrapper(object):
             'feedrate',
             'rapidrate',
             'rotation_xy',
-            'spindle_speed',
-            'spindlerate',
             'max_acceleration',
             'max_velocity',
         ]:
@@ -1578,33 +1567,33 @@ class LinuxCNCWrapper(object):
         del tx_obj_item
 
         tx_axis = EmcStatusMotionAxis()
-        for index, stat_axis in enumerate(stat.axis):
+        for index, stat_axis in enumerate(stat.joint):
             tx_axis.Clear()
             axis_modified = False
 
-            if index == stat.axes:
+            if index == stat.joints:
                 break
 
-            if len(self.status.motion.axis) == index:
-                self.status.motion.axis.add()
-                self.status.motion.axis[index].index = index
-                self.status.motion.axis[index].enabled = False
-                self.status.motion.axis[index].fault = False
-                self.status.motion.axis[index].ferror_current = 0.0
-                self.status.motion.axis[index].ferror_highmark = 0.0
-                self.status.motion.axis[index].homed = False
-                self.status.motion.axis[index].homing = False
-                self.status.motion.axis[index].inpos = False
-                self.status.motion.axis[index].input = 0.0
-                self.status.motion.axis[index].max_hard_limit = False
-                self.status.motion.axis[index].max_soft_limit = False
-                self.status.motion.axis[index].min_hard_limit = False
-                self.status.motion.axis[index].min_soft_limit = False
-                self.status.motion.axis[index].output = 0.0
-                self.status.motion.axis[index].override_limits = False
-                self.status.motion.axis[index].velocity = 0.0
+            if len(self.status.motion.joint) == index:
+                self.status.motion.joint.add()
+                self.status.motion.joint[index].index = index
+                self.status.motion.joint[index].enabled = False
+                self.status.motion.joint[index].fault = False
+                self.status.motion.joint[index].ferror_current = 0.0
+                self.status.motion.joint[index].ferror_highmark = 0.0
+                self.status.motion.joint[index].homed = False
+                self.status.motion.joint[index].homing = False
+                self.status.motion.joint[index].inpos = False
+                self.status.motion.joint[index].input = 0.0
+                self.status.motion.joint[index].max_hard_limit = False
+                self.status.motion.joint[index].max_soft_limit = False
+                self.status.motion.joint[index].min_hard_limit = False
+                self.status.motion.joint[index].min_soft_limit = False
+                self.status.motion.joint[index].output = 0.0
+                self.status.motion.joint[index].override_limits = False
+                self.status.motion.joint[index].velocity = 0.0
 
-            axis = self.status.motion.axis[index]
+            axis = self.status.motion.joint[index]
             for name in [
                 'enabled',
                 'fault',
@@ -1634,7 +1623,7 @@ class LinuxCNCWrapper(object):
 
             if axis_modified:
                 tx_axis.index = index
-                self.status_tx.motion.axis.add().CopyFrom(tx_axis)
+                self.status_tx.motion.joint.add().CopyFrom(tx_axis)
                 modified = True
         del tx_axis
 
@@ -1644,6 +1633,40 @@ class LinuxCNCWrapper(object):
             self.motion_full_update = False
         elif modified:
             self.send_motion(self.status_tx.motion, MT_EMCSTAT_INCREMENTAL_UPDATE)
+
+    def update_spindle(self, stat):
+        modified = False
+        if self.spindle_first_run:
+            self.status.spindle[0].brake = 0
+            self.status.spindle[0].direction = 0
+            self.status.spindle[0].enabled = 0
+            self.status.spindle[0].increasing = 0
+            self.status.spindle[0].override_enabled = False
+            self.status.spindle[0].speed = 0.0
+#            self.status.spindlerate = 0.0
+            self.spindle_first_run = False
+
+        for name in [
+            'brake',
+            'direction',
+            'enabled',
+            'increasing',
+            'override_enabled',
+        ]:
+            modified |= self.update_spindle_value(name, getattr(stat, name))
+
+        for name in [
+            'speed',
+#            'spindlerate',
+        ]:
+            modified |= self.update_spindle_float(name, getattr(stat, name))
+
+        if self.spindle_full_update:
+            self.add_pparams()
+            self.send_spindle(self.status.spindle, MT_EMCSTAT_FULL_UPDATE)
+            self.spindle_full_update = False
+        elif modified:
+            self.send_spindle(self.status_tx.spindle, MT_EMCSTAT_INCREMENTAL_UPDATE)
 
     def update_ui(self, _stat):
         modified = False
@@ -1661,66 +1684,66 @@ class LinuxCNCWrapper(object):
 
             modified |= self.update_ui_value(
                 'spindle_brake_visible',
-                self.get_ui_element_visible("motion.spindle-brake"),
+                self.get_ui_element_visible("spindle.0.brake"),
             )
             modified |= self.update_ui_value(
                 'spindle_cw_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-forward",
-                    "motion.spindle-on",
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.forward",
+                    "spindle.0.on",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
                 'spindle_ccw_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-reverse",
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.reverse",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
                 'spindle_stop_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-forward",
-                    "motion.spindle-reverse",
-                    "motion.spindle-on",
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.forward",
+                    "spindle.0.reverse",
+                    "spindle.0.on",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
                 'spindle_plus_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
                 'spindle_minus_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
                 'spindle_override_visible',
                 self.get_ui_element_visible(
-                    "motion.spindle-speed-out",
-                    "motion.spindle-speed-out-abs",
-                    "motion.spindle-speed-out-rps",
-                    "motion.spindle-speed-out-rps-abs",
+                    "spindle.0.speed-out",
+                    "spindle.0.speed-out-abs",
+                    "spindle.0.speed-out-rps",
+                    "spindle.0.speed-out-rps-abs",
                 ),
             )
             modified |= self.update_ui_value(
@@ -1756,6 +1779,8 @@ class LinuxCNCWrapper(object):
             self.update_interp(stat)
         if self.motion_subscribed:
             self.update_motion(stat)
+        if self.spindle_subscribed:
+            self.update_spindle(stat)
         if self.config_subscribed:
             self.update_config(stat)
         if self.ui_subscribed:
@@ -1872,6 +1897,8 @@ class LinuxCNCWrapper(object):
             self.send_status_msg('interp', MT_PING)
         if self.motion_subscribed:
             self.send_status_msg('motion', MT_PING)
+        if self.spindle_subscribed:
+            self.send_status_msg('spindle', MT_PING)
         if self.config_subscribed:
             self.send_status_msg('config', MT_PING)
         if self.ui_subscribed:
@@ -1899,6 +1926,9 @@ class LinuxCNCWrapper(object):
             if subscription == 'motion':
                 self.motion_subscribed = status
                 self.motion_full_update = status
+            if subscription == 'spindle':
+                self.spindle_subscribed = status
+                self.spindle_full_update = status
             elif subscription == 'task':
                 self.task_subscribed = status
                 self.task_full_update = status
@@ -1917,6 +1947,7 @@ class LinuxCNCWrapper(object):
 
             self.status_service_subscribed = (
                 self.motion_subscribed
+                or self.spindle_subscribed
                 or self.task_subscribed
                 or self.io_subscribed
                 or self.config_subscribed
@@ -2014,6 +2045,17 @@ class LinuxCNCWrapper(object):
         threading.Thread(
             target=self.command_completion_thread, args=(identity, ticket)
         ).start()
+
+    def _get_jog_mode(self):
+        # self.stat.motion_mode ==
+        # 1 = Joint
+        # 2 = MDI
+        # 3 = TELOP
+        if self.stat.motion_mode == 1:
+                JOGMODE = 1
+        else :
+            JOGMODE = 0
+        return JOGMODE
 
     def process_command(self, zmq_socket):
         with self.command_lock:
@@ -2162,7 +2204,9 @@ class LinuxCNCWrapper(object):
                     'emc_command_params'
                 ) and self.rx.emc_command_params.HasField('index'):
                     axis = self.rx.emc_command_params.index
-                    self.command.jog(linuxcnc.JOG_STOP, axis)
+                    JOGMODE = self._get_jog_mode()
+#                    sys.stderr.write("MSG: MT_EMC_AXIS_ABORT axis = %d" % axis + '\n')
+                    self.command.jog(linuxcnc.JOG_STOP, JOGMODE, axis)
                     if self.rx.HasField('ticket'):
                         self.wait_complete(identity, self.rx.ticket)
                 else:
@@ -2176,7 +2220,9 @@ class LinuxCNCWrapper(object):
                 ):
                     axis = self.rx.emc_command_params.index
                     velocity = self.rx.emc_command_params.velocity
-                    self.command.jog(linuxcnc.JOG_CONTINUOUS, axis, velocity)
+                    JOGMODE = self._get_jog_mode()
+#                    sys.stderr.write("MSG: MT_EMC_AXIS_JOG axis = %d velocity = %d" % (axis,velocity) + '\n')
+                    self.command.jog(linuxcnc.JOG_CONTINUOUS, JOGMODE, axis, velocity)
                     if self.rx.HasField('ticket'):
                         self.wait_complete(identity, self.rx.ticket)
                 else:
@@ -2192,7 +2238,9 @@ class LinuxCNCWrapper(object):
                     axis = self.rx.emc_command_params.index
                     velocity = self.rx.emc_command_params.velocity
                     distance = self.rx.emc_command_params.distance
-                    self.command.jog(linuxcnc.JOG_INCREMENT, axis, velocity, distance)
+                    JOGMODE = self._get_jog_mode()
+#                    sys.stderr.write("MSG: MT_EMC_AXIS_INCR_JOG axis = %d velocity = %d distance = %d " % (axis,velocity,distance) + '\n')
+                    self.command.jog(linuxcnc.JOG_INCREMENT, JOGMODE, axis, velocity, distance)
                     if self.rx.HasField('ticket'):
                         self.wait_complete(identity, self.rx.ticket)
                 else:
@@ -2406,8 +2454,8 @@ class LinuxCNCWrapper(object):
                 if self.rx.HasField(
                     'emc_command_params'
                 ) and self.rx.emc_command_params.HasField('enable'):
-                    spindle_override = self.rx.emc_command_params.enable
-                    self.command.set_spindle_override(spindle_override)
+#                    spindle_override = self.rx.emc_command_params.enable
+#                    self.command.set_spindle_override(spindle_override)
                     if self.rx.HasField('ticket'):
                         self.wait_complete(identity, self.rx.ticket)
                 else:

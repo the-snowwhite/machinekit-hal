@@ -206,7 +206,7 @@ message EmcStatusConfigAxis {
     option (nanopb_msgopt).msgid = 1102;
 
     required int32          index               = 1;  /// Axis index.
-    optional EmcAxisType    axis_type           = 2;  /// Type of axis. Reflects [AXIS_N]TYPE
+    optional EmcAxisType    joint_type          = 2;  /// Type of axis. Reflects [AXIS_N]TYPE
     optional double         backlash            = 3;  /// Axis backlash. Reflects [AXIS_N]BACKLASH
     optional double         max_ferror          = 4;  /// Maximum following error. Reflects [AXIS_N]FERROR
     optional double         max_position_limit  = 5;  /// Maximum position limit. Reflects [AXIS_N]MAX_LIMIT
@@ -305,8 +305,8 @@ message EmcStatusConfig {
 
     optional double                     default_acceleration     = 1;  /// Default acceleration. Reflects parameter [TRAJ]DEFAULT_ACCELERATION.
     //optional double                     angular_units            = 2;  // Angular units scale. Reflects [TRAJ]ANGULAR_UNITS field removed
-    optional int32                      axes                     = 3;  /// Number of axes. Reflects [TRAJ]AXES
-    repeated EmcStatusConfigAxis        axis                     = 4;  /// Per axis configuration values.
+    optional int32                      joints                   = 3;  /// Number of axes. Reflects [TRAJ]AXES
+    repeated EmcStatusConfigAxis        joint                    = 4;  /// Per axis configuration values.
     optional int32                      axis_mask                = 5;  /// Mask of axes. Reflects [TRAJ]COORDINATES and returns the sum of the axes X=1, Y=2, Z=4, A=8, B=16, C=32, U=64, V=128, W=256.
     optional double                     cycle_time               = 6;  /// Polling cycle time. Reflects [TRAJ]CYCLE_TIME
     optional int32                      debug                    = 7;  /// Debug flag.
@@ -356,7 +356,7 @@ message EmcStatusMotion {
     optional bool                   adaptive_feed_enabled   = 3;  /// Status of adaptive feed override.
     repeated EmcStatusAnalogIO      ain                     = 4;  /// Status of analog input pins.
     repeated EmcStatusAnalogIO      aout                    = 5;  /// Status of analog output pins.
-    repeated EmcStatusMotionAxis    axis                    = 6;  /// Per axis motion values.
+    repeated EmcStatusMotionAxis    joint                   = 6;  /// Per axis motion values.
     optional bool                   block_delete            = 7;  /// Block delete on or off.
     optional int32                  current_line            = 8;  /// Currently executing line.
     optional double                 current_vel             = 9;  /// Current velocity in Cartesian space.

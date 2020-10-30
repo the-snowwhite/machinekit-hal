@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/machinekit/machinetalk-protobuf#readme",
   "dependencies": {
-    "mkdirp": "0.5.1",
+    "mkdirp": "^1.0.4",
     "protobufjs": "5.0.3"
   },
   "devDependencies": {
