@@ -3708,7 +3708,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],2:[function(require,module,exports){
+},{"protobufjs":26}],2:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -4106,7 +4106,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],3:[function(require,module,exports){
+},{"protobufjs":26}],3:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -4335,7 +4335,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],4:[function(require,module,exports){
+},{"protobufjs":26}],4:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -4570,7 +4570,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],5:[function(require,module,exports){
+},{"protobufjs":26}],5:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -4772,7 +4772,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],6:[function(require,module,exports){
+},{"protobufjs":26}],6:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -7090,7 +7090,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],7:[function(require,module,exports){
+},{"protobufjs":26}],7:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -9600,6 +9600,12 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "optional",
                             "type": "string",
+                            "name": "cgname",
+                            "id": 14
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "string",
                             "name": "comp",
                             "id": 10
                         },
@@ -10285,7 +10291,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "optional",
                             "type": "EmcAxisType",
-                            "name": "axis_type",
+                            "name": "joint_type",
                             "id": 2
                         },
                         {
@@ -10513,7 +10519,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "repeated",
                             "type": "EmcStatusConfigAxis",
-                            "name": "axis",
+                            "name": "joint",
                             "id": 4
                         },
                         {
@@ -10762,7 +10768,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "repeated",
                             "type": "EmcStatusMotionAxis",
-                            "name": "axis",
+                            "name": "joint",
                             "id": 6
                         },
                         {
@@ -15051,7 +15057,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],8:[function(require,module,exports){
+},{"protobufjs":26}],8:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -15882,7 +15888,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],9:[function(require,module,exports){
+},{"protobufjs":26}],9:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -16025,7 +16031,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],10:[function(require,module,exports){
+},{"protobufjs":26}],10:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -19264,7 +19270,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],11:[function(require,module,exports){
+},{"protobufjs":26}],11:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -19778,7 +19784,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],12:[function(require,module,exports){
+},{"protobufjs":26}],12:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -20070,7 +20076,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],13:[function(require,module,exports){
+},{"protobufjs":26}],13:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -22563,7 +22569,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],14:[function(require,module,exports){
+},{"protobufjs":26}],14:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -22718,6 +22724,12 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "optional",
                             "type": "string",
+                            "name": "cgname",
+                            "id": 14
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "string",
                             "name": "comp",
                             "id": 10
                         },
@@ -22801,7 +22813,224 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],15:[function(require,module,exports){
+},{"protobufjs":26}],15:[function(require,module,exports){
+module.exports = require("protobufjs").newBuilder({})['import']({
+    "package": null,
+    "syntax": "proto2",
+    "options": {
+        "java_package": "fi.kapsi.koti.jpa.nanopb"
+    },
+    "messages": [
+        {
+            "name": "NanoPBOptions",
+            "syntax": "proto2",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "int32",
+                    "name": "max_size",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "int32",
+                    "name": "max_count",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "type": "IntSize",
+                    "name": "int_size",
+                    "id": 7,
+                    "options": {
+                        "default": "IS_DEFAULT"
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "FieldType",
+                    "name": "type",
+                    "id": 3,
+                    "options": {
+                        "default": "FT_DEFAULT"
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "bool",
+                    "name": "long_names",
+                    "id": 4,
+                    "options": {
+                        "default": true
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "bool",
+                    "name": "packed_struct",
+                    "id": 5,
+                    "options": {
+                        "default": false
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "bool",
+                    "name": "skip_message",
+                    "id": 6,
+                    "options": {
+                        "default": false
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "bool",
+                    "name": "no_unions",
+                    "id": 8,
+                    "options": {
+                        "default": false
+                    }
+                },
+                {
+                    "rule": "optional",
+                    "type": "uint32",
+                    "name": "msgid",
+                    "id": 9
+                }
+            ]
+        },
+        {
+            "name": "machinetalk",
+            "fields": [],
+            "syntax": "proto2",
+            "messages": [
+                {
+                    "name": "Sample",
+                    "syntax": "proto2",
+                    "options": {
+                        "(nanopb_msgopt).msgid": 361
+                    },
+                    "fields": [
+                        {
+                            "rule": "optional",
+                            "type": "fixed64",
+                            "name": "timestamp",
+                            "id": 1
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "bytes",
+                            "name": "v_bytes",
+                            "id": 2
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "sfixed32",
+                            "name": "v_int32",
+                            "id": 3
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "sfixed64",
+                            "name": "v_int64",
+                            "id": 4
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "fixed32",
+                            "name": "v_uint32",
+                            "id": 5
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "fixed64",
+                            "name": "v_uint64",
+                            "id": 6
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "double",
+                            "name": "v_double",
+                            "id": 7
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "string",
+                            "name": "v_string",
+                            "id": 8,
+                            "options": {
+                                "(nanopb).max_size": 41
+                            }
+                        },
+                        {
+                            "rule": "optional",
+                            "type": "bool",
+                            "name": "v_bool",
+                            "id": 9
+                        }
+                    ]
+                }
+            ],
+            "isNamespace": true
+        }
+    ],
+    "enums": [
+        {
+            "name": "FieldType",
+            "syntax": "proto2",
+            "values": [
+                {
+                    "name": "FT_DEFAULT",
+                    "id": 0
+                },
+                {
+                    "name": "FT_CALLBACK",
+                    "id": 1
+                },
+                {
+                    "name": "FT_POINTER",
+                    "id": 4
+                },
+                {
+                    "name": "FT_STATIC",
+                    "id": 2
+                },
+                {
+                    "name": "FT_IGNORE",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "name": "IntSize",
+            "syntax": "proto2",
+            "values": [
+                {
+                    "name": "IS_DEFAULT",
+                    "id": 0
+                },
+                {
+                    "name": "IS_8",
+                    "id": 8
+                },
+                {
+                    "name": "IS_16",
+                    "id": 16
+                },
+                {
+                    "name": "IS_32",
+                    "id": 32
+                },
+                {
+                    "name": "IS_64",
+                    "id": 64
+                }
+            ]
+        }
+    ],
+    "isNamespace": true
+}).build();
+},{"protobufjs":26}],16:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -23679,7 +23908,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "optional",
                             "type": "EmcAxisType",
-                            "name": "axis_type",
+                            "name": "joint_type",
                             "id": 2
                         },
                         {
@@ -23907,7 +24136,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "repeated",
                             "type": "EmcStatusConfigAxis",
-                            "name": "axis",
+                            "name": "joint",
                             "id": 4
                         },
                         {
@@ -24156,7 +24385,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
                         {
                             "rule": "repeated",
                             "type": "EmcStatusMotionAxis",
-                            "name": "axis",
+                            "name": "joint",
                             "id": 6
                         },
                         {
@@ -27699,7 +27928,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],16:[function(require,module,exports){
+},{"protobufjs":26}],17:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -30107,7 +30336,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],17:[function(require,module,exports){
+},{"protobufjs":26}],18:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -30407,7 +30636,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],18:[function(require,module,exports){
+},{"protobufjs":26}],19:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -32684,7 +32913,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],19:[function(require,module,exports){
+},{"protobufjs":26}],20:[function(require,module,exports){
 module.exports = require("protobufjs").newBuilder({})['import']({
     "package": null,
     "syntax": "proto2",
@@ -35143,7 +35372,7 @@ module.exports = require("protobufjs").newBuilder({})['import']({
     ],
     "isNamespace": true
 }).build();
-},{"protobufjs":25}],20:[function(require,module,exports){
+},{"protobufjs":26}],21:[function(require,module,exports){
 module.exports['canon'] = require('./machinetalk/protobuf/canon.js').pb;
 module.exports['config'] = require('./machinetalk/protobuf/config.js').pb;
 module.exports['emcclass'] = require('./machinetalk/protobuf/emcclass.js').pb;
@@ -35158,15 +35387,16 @@ module.exports['preview'] = require('./machinetalk/protobuf/preview.js').pb;
 module.exports['ros'] = require('./machinetalk/protobuf/ros.js').pb;
 module.exports['rtapi_message'] = require('./machinetalk/protobuf/rtapi_message.js').pb;
 module.exports['rtapicommand'] = require('./machinetalk/protobuf/rtapicommand.js').pb;
+module.exports['sample'] = require('./machinetalk/protobuf/sample.js').pb;
 module.exports['status'] = require('./machinetalk/protobuf/status.js').pb;
 module.exports['task'] = require('./machinetalk/protobuf/task.js').pb;
 module.exports['test'] = require('./machinetalk/protobuf/test.js').pb;
 module.exports['types'] = require('./machinetalk/protobuf/types.js').pb;
 module.exports['value'] = require('./machinetalk/protobuf/value.js').pb;
 
-},{"./machinetalk/protobuf/canon.js":1,"./machinetalk/protobuf/config.js":2,"./machinetalk/protobuf/emcclass.js":3,"./machinetalk/protobuf/firmware.js":4,"./machinetalk/protobuf/jplan.js":5,"./machinetalk/protobuf/log.js":6,"./machinetalk/protobuf/message.js":7,"./machinetalk/protobuf/motcmds.js":8,"./machinetalk/protobuf/nanopb.js":9,"./machinetalk/protobuf/object.js":10,"./machinetalk/protobuf/preview.js":11,"./machinetalk/protobuf/ros.js":12,"./machinetalk/protobuf/rtapi_message.js":13,"./machinetalk/protobuf/rtapicommand.js":14,"./machinetalk/protobuf/status.js":15,"./machinetalk/protobuf/task.js":16,"./machinetalk/protobuf/test.js":17,"./machinetalk/protobuf/types.js":18,"./machinetalk/protobuf/value.js":19}],21:[function(require,module,exports){
+},{"./machinetalk/protobuf/canon.js":1,"./machinetalk/protobuf/config.js":2,"./machinetalk/protobuf/emcclass.js":3,"./machinetalk/protobuf/firmware.js":4,"./machinetalk/protobuf/jplan.js":5,"./machinetalk/protobuf/log.js":6,"./machinetalk/protobuf/message.js":7,"./machinetalk/protobuf/motcmds.js":8,"./machinetalk/protobuf/nanopb.js":9,"./machinetalk/protobuf/object.js":10,"./machinetalk/protobuf/preview.js":11,"./machinetalk/protobuf/ros.js":12,"./machinetalk/protobuf/rtapi_message.js":13,"./machinetalk/protobuf/rtapicommand.js":14,"./machinetalk/protobuf/sample.js":15,"./machinetalk/protobuf/status.js":16,"./machinetalk/protobuf/task.js":17,"./machinetalk/protobuf/test.js":18,"./machinetalk/protobuf/types.js":19,"./machinetalk/protobuf/value.js":20}],22:[function(require,module,exports){
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 /*
  Copyright 2013-2014 Daniel Wirtz <dcode@dcode.io>
 
@@ -38914,7 +39144,7 @@ module.exports['value'] = require('./machinetalk/protobuf/value.js').pb;
     return ByteBuffer;
 });
 
-},{"long":23}],23:[function(require,module,exports){
+},{"long":24}],24:[function(require,module,exports){
 /*
  Copyright 2013 Daniel Wirtz <dcode@dcode.io>
  Copyright 2009 The Closure Library Authors. All Rights Reserved.
@@ -40125,7 +40355,7 @@ module.exports['value'] = require('./machinetalk/protobuf/value.js').pb;
     return Long;
 });
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -40311,8 +40541,8 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],25:[function(require,module,exports){
-(function (process){
+},{}],26:[function(require,module,exports){
+(function (process){(function (){
 /*
  Copyright 2013 Daniel Wirtz <dcode@dcode.io>
 
@@ -45579,6 +45809,6 @@ process.umask = function() { return 0; };
     return ProtoBuf;
 });
 
-}).call(this,require('_process'))
-},{"_process":24,"bytebuffer":22,"fs":21,"path":21}]},{},[20])(20)
+}).call(this)}).call(this,require('_process'))
+},{"_process":25,"bytebuffer":23,"fs":22,"path":22}]},{},[21])(21)
 });
