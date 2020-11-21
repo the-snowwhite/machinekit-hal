@@ -13,7 +13,7 @@
 # 	/home/mah/linuxcnc/src/machinetalk/proto/canon.proto
 #
 # option example: --depends-out="--debug --vpath=foo --vpath=bar --cgen=baz --pygen=barf":/outputpath"
-
+import google
 from google.protobuf.compiler.plugin_pb2 import CodeGeneratorRequest,CodeGeneratorResponse
 from sys import stdin,stdout
 import shlex

@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -21,10 +20,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/task.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n\x1fmachinetalk/protobuf/task.proto\x12\x0bmachinetalk\x1a machinetalk/protobuf/types.proto\x1a!machinetalk/protobuf/nanopb.proto\"8\n\x0fTaskPlanExecute\x12\x0f\n\x07\x63ommand\x18\n \x01(\t\x12\x0c\n\x04line\x18\x1e \x01(\x0f:\x06\x92?\x03H\xb0\t\",\n\x13TaskPlanBlockDelete\x12\r\n\x05state\x18\n \x02(\x08:\x06\x92?\x03H\xb1\t\"-\n\x14TaskPlanOptionalStop\x12\r\n\x05state\x18\n \x02(\x08:\x06\x92?\x03H\xb2\t\"(\n\x0cTaskPlanOpen\x12\x10\n\x08\x66ilename\x18\n \x02(\t:\x06\x92?\x03H\xb3\t\"R\n\rTaskPlanReply\x12\'\n\x03\x63md\x18\n \x02(\x0e\x32\x1a.machinetalk.ContainerType\x12\x10\n\x08\x65rrormsg\x18\x14 \x01(\t:\x06\x92?\x03H\xb4\t\"#\n\tTaskReply\x12\x0e\n\x06ticket\x18\n \x02(\x07:\x06\x92?\x03H\xb5\t\"^\n\x0cTicketUpdate\x12\x0f\n\x07\x63ticket\x18\n \x02(\x07\x12\'\n\x06status\x18\x14 \x02(\x0e\x32\x17.machinetalk.RCS_STATUS\x12\x0c\n\x04text\x18\x1e \x01(\t:\x06\x92?\x03H\xb6\t')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_types__pb2.DESCRIPTOR,machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -42,21 +41,21 @@ _TASKPLANEXECUTE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='line', full_name='machinetalk.TaskPlanExecute.line', index=1,
       number=30, type=15, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\260\t')),
+  serialized_options=_b('\222?\003H\260\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -80,14 +79,14 @@ _TASKPLANBLOCKDELETE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\261\t')),
+  serialized_options=_b('\222?\003H\261\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -111,14 +110,14 @@ _TASKPLANOPTIONALSTOP = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\262\t')),
+  serialized_options=_b('\222?\003H\262\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -142,14 +141,14 @@ _TASKPLANOPEN = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\263\t')),
+  serialized_options=_b('\222?\003H\263\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -173,21 +172,21 @@ _TASKPLANREPLY = _descriptor.Descriptor(
       has_default_value=False, default_value=2,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='errormsg', full_name='machinetalk.TaskPlanReply.errormsg', index=1,
       number=20, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\264\t')),
+  serialized_options=_b('\222?\003H\264\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -211,14 +210,14 @@ _TASKREPLY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\265\t')),
+  serialized_options=_b('\222?\003H\265\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -242,28 +241,28 @@ _TICKETUPDATE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='status', full_name='machinetalk.TicketUpdate.status', index=1,
       number=20, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=-1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='text', full_name='machinetalk.TicketUpdate.text', index=2,
       number=30, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\266\t')),
+  serialized_options=_b('\222?\003H\266\t'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -282,6 +281,7 @@ DESCRIPTOR.message_types_by_name['TaskPlanOpen'] = _TASKPLANOPEN
 DESCRIPTOR.message_types_by_name['TaskPlanReply'] = _TASKPLANREPLY
 DESCRIPTOR.message_types_by_name['TaskReply'] = _TASKREPLY
 DESCRIPTOR.message_types_by_name['TicketUpdate'] = _TICKETUPDATE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TaskPlanExecute = _reflection.GeneratedProtocolMessageType('TaskPlanExecute', (_message.Message,), dict(
   DESCRIPTOR = _TASKPLANEXECUTE,
@@ -333,18 +333,11 @@ TicketUpdate = _reflection.GeneratedProtocolMessageType('TicketUpdate', (_messag
 _sym_db.RegisterMessage(TicketUpdate)
 
 
-_TASKPLANEXECUTE.has_options = True
-_TASKPLANEXECUTE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\260\t'))
-_TASKPLANBLOCKDELETE.has_options = True
-_TASKPLANBLOCKDELETE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\261\t'))
-_TASKPLANOPTIONALSTOP.has_options = True
-_TASKPLANOPTIONALSTOP._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\262\t'))
-_TASKPLANOPEN.has_options = True
-_TASKPLANOPEN._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\263\t'))
-_TASKPLANREPLY.has_options = True
-_TASKPLANREPLY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\264\t'))
-_TASKREPLY.has_options = True
-_TASKREPLY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\265\t'))
-_TICKETUPDATE.has_options = True
-_TICKETUPDATE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\266\t'))
+_TASKPLANEXECUTE._options = None
+_TASKPLANBLOCKDELETE._options = None
+_TASKPLANOPTIONALSTOP._options = None
+_TASKPLANOPEN._options = None
+_TASKPLANREPLY._options = None
+_TASKREPLY._options = None
+_TICKETUPDATE._options = None
 # @@protoc_insertion_point(module_scope)

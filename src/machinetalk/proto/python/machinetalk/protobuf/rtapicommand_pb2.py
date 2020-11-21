@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,10 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/rtapicommand.proto',
   package='machinetalk',
   syntax='proto2',
-  serialized_pb=_b('\n\'machinetalk/protobuf/rtapicommand.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\"\xf7\x01\n\x0cRTAPICommand\x12\x10\n\x08instance\x18\x01 \x02(\x05\x12\x0f\n\x07modname\x18\x02 \x01(\t\x12\x13\n\x0brt_msglevel\x18\x03 \x01(\x05\x12\x15\n\ruser_msglevel\x18\x04 \x01(\x05\x12\x0c\n\x04\x61rgv\x18\x05 \x03(\t\x12\x12\n\nthreadname\x18\x06 \x01(\t\x12\x14\n\x0cthreadperiod\x18\x07 \x01(\x05\x12\x0e\n\x06use_fp\x18\x08 \x01(\x08\x12\x0b\n\x03\x63pu\x18\t \x01(\x05\x12\x0c\n\x04\x63omp\x18\n \x01(\t\x12\x0c\n\x04\x66unc\x18\x0b \x01(\t\x12\x10\n\x08instname\x18\x0c \x01(\t\x12\r\n\x05\x66lags\x18\r \x01(\x05:\x06\x92?\x03H\x84\x07')
+  serialized_options=None,
+  serialized_pb=_b('\n\'machinetalk/protobuf/rtapicommand.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\"\x87\x02\n\x0cRTAPICommand\x12\x10\n\x08instance\x18\x01 \x02(\x05\x12\x0f\n\x07modname\x18\x02 \x01(\t\x12\x13\n\x0brt_msglevel\x18\x03 \x01(\x05\x12\x15\n\ruser_msglevel\x18\x04 \x01(\x05\x12\x0c\n\x04\x61rgv\x18\x05 \x03(\t\x12\x12\n\nthreadname\x18\x06 \x01(\t\x12\x14\n\x0cthreadperiod\x18\x07 \x01(\x05\x12\x0e\n\x06use_fp\x18\x08 \x01(\x08\x12\x0b\n\x03\x63pu\x18\t \x01(\x05\x12\x0e\n\x06\x63gname\x18\x0e \x01(\t\x12\x0c\n\x04\x63omp\x18\n \x01(\t\x12\x0c\n\x04\x66unc\x18\x0b \x01(\t\x12\x10\n\x08instname\x18\x0c \x01(\t\x12\r\n\x05\x66lags\x18\r \x01(\x05:\x06\x92?\x03H\x84\x07')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -41,108 +40,116 @@ _RTAPICOMMAND = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='modname', full_name='machinetalk.RTAPICommand.modname', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='rt_msglevel', full_name='machinetalk.RTAPICommand.rt_msglevel', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='user_msglevel', full_name='machinetalk.RTAPICommand.user_msglevel', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='argv', full_name='machinetalk.RTAPICommand.argv', index=4,
       number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='threadname', full_name='machinetalk.RTAPICommand.threadname', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='threadperiod', full_name='machinetalk.RTAPICommand.threadperiod', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='use_fp', full_name='machinetalk.RTAPICommand.use_fp', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='cpu', full_name='machinetalk.RTAPICommand.cpu', index=8,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='comp', full_name='machinetalk.RTAPICommand.comp', index=9,
+      name='cgname', full_name='machinetalk.RTAPICommand.cgname', index=9,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='comp', full_name='machinetalk.RTAPICommand.comp', index=10,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='func', full_name='machinetalk.RTAPICommand.func', index=10,
+      name='func', full_name='machinetalk.RTAPICommand.func', index=11,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='instname', full_name='machinetalk.RTAPICommand.instname', index=11,
+      name='instname', full_name='machinetalk.RTAPICommand.instname', index=12,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='flags', full_name='machinetalk.RTAPICommand.flags', index=12,
+      name='flags', full_name='machinetalk.RTAPICommand.flags', index=13,
       number=13, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\204\007')),
+  serialized_options=_b('\222?\003H\204\007'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
   serialized_start=92,
-  serialized_end=339,
+  serialized_end=355,
 )
 
 DESCRIPTOR.message_types_by_name['RTAPICommand'] = _RTAPICOMMAND
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RTAPICommand = _reflection.GeneratedProtocolMessageType('RTAPICommand', (_message.Message,), dict(
   DESCRIPTOR = _RTAPICOMMAND,
@@ -152,6 +159,5 @@ RTAPICommand = _reflection.GeneratedProtocolMessageType('RTAPICommand', (_messag
 _sym_db.RegisterMessage(RTAPICommand)
 
 
-_RTAPICOMMAND.has_options = True
-_RTAPICOMMAND._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\204\007'))
+_RTAPICOMMAND._options = None
 # @@protoc_insertion_point(module_scope)

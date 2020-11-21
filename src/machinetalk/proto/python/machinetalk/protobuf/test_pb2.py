@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -22,10 +21,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/test.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n\x1fmachinetalk/protobuf/test.proto\x12\x0bmachinetalk\x1a#machinetalk/protobuf/emcclass.proto\x1a!machinetalk/protobuf/nanopb.proto\"\xb9\x01\n\x05Test1\x12#\n\x02op\x18\n \x02(\x0e\x32\x17.machinetalk.TestOpType\x12!\n\x03\x65nd\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12(\n\x06\x63\x65nter\x18\x1e \x01(\x0b\x32\x18.machinetalk.PmCartesian\x12(\n\x06normal\x18( \x01(\x0b\x32\x18.machinetalk.PmCartesian\x12\x0c\n\x04turn\x18\x32 \x01(\x05:\x06\x92?\x03H\x94\n\"\x0f\n\x05Test2:\x06\x92?\x03H\x95\n\"\x0f\n\x05Test3:\x06\x92?\x03H\x96\n*\"\n\nTestOpType\x12\x08\n\x04LINE\x10\n\x12\n\n\x06\x43IRCLE\x10\x14')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_emcclass__pb2.DESCRIPTOR,machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _TESTOPTYPE = _descriptor.EnumDescriptor(
   name='TestOpType',
@@ -35,15 +34,15 @@ _TESTOPTYPE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='LINE', index=0, number=10,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='CIRCLE', index=1, number=20,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=342,
   serialized_end=376,
 )
@@ -68,42 +67,42 @@ _TEST1 = _descriptor.Descriptor(
       has_default_value=False, default_value=10,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='machinetalk.Test1.end', index=1,
       number=20, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='center', full_name='machinetalk.Test1.center', index=2,
       number=30, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='normal', full_name='machinetalk.Test1.normal', index=3,
       number=40, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='turn', full_name='machinetalk.Test1.turn', index=4,
       number=50, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\224\n')),
+  serialized_options=_b('\222?\003H\224\n'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -127,7 +126,7 @@ _TEST2 = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\225\n')),
+  serialized_options=_b('\222?\003H\225\n'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -151,7 +150,7 @@ _TEST3 = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\226\n')),
+  serialized_options=_b('\222?\003H\226\n'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -169,6 +168,7 @@ DESCRIPTOR.message_types_by_name['Test1'] = _TEST1
 DESCRIPTOR.message_types_by_name['Test2'] = _TEST2
 DESCRIPTOR.message_types_by_name['Test3'] = _TEST3
 DESCRIPTOR.enum_types_by_name['TestOpType'] = _TESTOPTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Test1 = _reflection.GeneratedProtocolMessageType('Test1', (_message.Message,), dict(
   DESCRIPTOR = _TEST1,
@@ -192,10 +192,7 @@ Test3 = _reflection.GeneratedProtocolMessageType('Test3', (_message.Message,), d
 _sym_db.RegisterMessage(Test3)
 
 
-_TEST1.has_options = True
-_TEST1._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\224\n'))
-_TEST2.has_options = True
-_TEST2._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\225\n'))
-_TEST3.has_options = True
-_TEST3._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\226\n'))
+_TEST1._options = None
+_TEST2._options = None
+_TEST3._options = None
 # @@protoc_insertion_point(module_scope)

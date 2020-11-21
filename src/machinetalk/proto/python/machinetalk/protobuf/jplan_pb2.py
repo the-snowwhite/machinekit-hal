@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,10 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/jplan.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n machinetalk/protobuf/jplan.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\"W\n\nJplanJoint\x12\x0f\n\x07pos_cmd\x18\x01 \x01(\x01\x12\x0f\n\x07max_vel\x18\x02 \x01(\x01\x12\x0f\n\x07max_acc\x18\x03 \x01(\x01\x12\x0e\n\x06\x65nable\x18\x04 \x01(\x08:\x06\x92?\x03H\xe0\x02\"E\n\x0cJplanCommand\x12-\n\x05joint\x18\x02 \x03(\x0b\x32\x17.machinetalk.JplanJointB\x05\x92?\x02\x10\n:\x06\x92?\x03H\xe2\x02')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -41,35 +40,35 @@ _JPLANJOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='max_vel', full_name='machinetalk.JplanJoint.max_vel', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='max_acc', full_name='machinetalk.JplanJoint.max_acc', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='enable', full_name='machinetalk.JplanJoint.enable', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\340\002')),
+  serialized_options=_b('\222?\003H\340\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -93,14 +92,14 @@ _JPLANCOMMAND = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))),
+      serialized_options=_b('\222?\002\020\n'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\342\002')),
+  serialized_options=_b('\222?\003H\342\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -113,6 +112,7 @@ _JPLANCOMMAND = _descriptor.Descriptor(
 _JPLANCOMMAND.fields_by_name['joint'].message_type = _JPLANJOINT
 DESCRIPTOR.message_types_by_name['JplanJoint'] = _JPLANJOINT
 DESCRIPTOR.message_types_by_name['JplanCommand'] = _JPLANCOMMAND
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 JplanJoint = _reflection.GeneratedProtocolMessageType('JplanJoint', (_message.Message,), dict(
   DESCRIPTOR = _JPLANJOINT,
@@ -129,10 +129,7 @@ JplanCommand = _reflection.GeneratedProtocolMessageType('JplanCommand', (_messag
 _sym_db.RegisterMessage(JplanCommand)
 
 
-_JPLANJOINT.has_options = True
-_JPLANJOINT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\340\002'))
-_JPLANCOMMAND.fields_by_name['joint'].has_options = True
-_JPLANCOMMAND.fields_by_name['joint']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))
-_JPLANCOMMAND.has_options = True
-_JPLANCOMMAND._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\342\002'))
+_JPLANJOINT._options = None
+_JPLANCOMMAND.fields_by_name['joint']._options = None
+_JPLANCOMMAND._options = None
 # @@protoc_insertion_point(module_scope)

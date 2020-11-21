@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,10 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/ros.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n\x1emachinetalk/protobuf/ros.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\"+\n\x04Time\x12\x0c\n\x04secs\x18\x01 \x01(\r\x12\r\n\x05nsecs\x18\x02 \x01(\r:\x06\x92?\x03H\xf3\x02\"X\n\x06Header\x12\x0b\n\x03seq\x18\x01 \x01(\r\x12 \n\x05stamp\x18\x02 \x01(\x0b\x32\x11.machinetalk.Time\x12\x17\n\x08\x66rame_id\x18\x03 \x01(\tB\x05\x92?\x02\x08\x14:\x06\x92?\x03H\xf4\x02\"\xc3\x01\n\x14JointTrajectoryPoint\x12\x18\n\tpositions\x18\x01 \x03(\x01\x42\x05\x92?\x02\x10\n\x12\x19\n\nvelocities\x18\x02 \x03(\x01\x42\x05\x92?\x02\x10\n\x12\x1c\n\raccelerations\x18\x03 \x03(\x01\x42\x05\x92?\x02\x10\n\x12\x15\n\x06\x65\x66\x66ort\x18\x04 \x03(\x01\x42\x05\x92?\x02\x10\n\x12\x17\n\x0ftime_from_start\x18\x05 \x01(\x01\x12\x10\n\x08\x64uration\x18\x07 \x01(\x01\x12\x0e\n\x06serial\x18\x08 \x01(\r:\x06\x92?\x03H\xf5\x02\"\x86\x01\n\x0fJointTrajectory\x12#\n\x06header\x18\x01 \x01(\x0b\x32\x13.machinetalk.Header\x12\x13\n\x0bjoint_names\x18\x02 \x03(\t\x12\x31\n\x06points\x18\x03 \x03(\x0b\x32!.machinetalk.JointTrajectoryPoint:\x06\x92?\x03H\xf6\x02')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -41,21 +40,21 @@ _TIME = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='nsecs', full_name='machinetalk.Time.nsecs', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\363\002')),
+  serialized_options=_b('\222?\003H\363\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -79,28 +78,28 @@ _HEADER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='stamp', full_name='machinetalk.Header.stamp', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='frame_id', full_name='machinetalk.Header.frame_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\010\024'))),
+      serialized_options=_b('\222?\002\010\024'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\364\002')),
+  serialized_options=_b('\222?\003H\364\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -124,56 +123,56 @@ _JOINTTRAJECTORYPOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))),
+      serialized_options=_b('\222?\002\020\n'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='velocities', full_name='machinetalk.JointTrajectoryPoint.velocities', index=1,
       number=2, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))),
+      serialized_options=_b('\222?\002\020\n'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='accelerations', full_name='machinetalk.JointTrajectoryPoint.accelerations', index=2,
       number=3, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))),
+      serialized_options=_b('\222?\002\020\n'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='effort', full_name='machinetalk.JointTrajectoryPoint.effort', index=3,
       number=4, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))),
+      serialized_options=_b('\222?\002\020\n'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='time_from_start', full_name='machinetalk.JointTrajectoryPoint.time_from_start', index=4,
       number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='duration', full_name='machinetalk.JointTrajectoryPoint.duration', index=5,
       number=7, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='serial', full_name='machinetalk.JointTrajectoryPoint.serial', index=6,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\365\002')),
+  serialized_options=_b('\222?\003H\365\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -197,28 +196,28 @@ _JOINTTRAJECTORY = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='joint_names', full_name='machinetalk.JointTrajectory.joint_names', index=1,
       number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='points', full_name='machinetalk.JointTrajectory.points', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\366\002')),
+  serialized_options=_b('\222?\003H\366\002'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -235,6 +234,7 @@ DESCRIPTOR.message_types_by_name['Time'] = _TIME
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 DESCRIPTOR.message_types_by_name['JointTrajectoryPoint'] = _JOINTTRAJECTORYPOINT
 DESCRIPTOR.message_types_by_name['JointTrajectory'] = _JOINTTRAJECTORY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Time = _reflection.GeneratedProtocolMessageType('Time', (_message.Message,), dict(
   DESCRIPTOR = _TIME,
@@ -265,22 +265,13 @@ JointTrajectory = _reflection.GeneratedProtocolMessageType('JointTrajectory', (_
 _sym_db.RegisterMessage(JointTrajectory)
 
 
-_TIME.has_options = True
-_TIME._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\363\002'))
-_HEADER.fields_by_name['frame_id'].has_options = True
-_HEADER.fields_by_name['frame_id']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\010\024'))
-_HEADER.has_options = True
-_HEADER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\364\002'))
-_JOINTTRAJECTORYPOINT.fields_by_name['positions'].has_options = True
-_JOINTTRAJECTORYPOINT.fields_by_name['positions']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))
-_JOINTTRAJECTORYPOINT.fields_by_name['velocities'].has_options = True
-_JOINTTRAJECTORYPOINT.fields_by_name['velocities']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))
-_JOINTTRAJECTORYPOINT.fields_by_name['accelerations'].has_options = True
-_JOINTTRAJECTORYPOINT.fields_by_name['accelerations']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))
-_JOINTTRAJECTORYPOINT.fields_by_name['effort'].has_options = True
-_JOINTTRAJECTORYPOINT.fields_by_name['effort']._options = _descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\222?\002\020\n'))
-_JOINTTRAJECTORYPOINT.has_options = True
-_JOINTTRAJECTORYPOINT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\365\002'))
-_JOINTTRAJECTORY.has_options = True
-_JOINTTRAJECTORY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\366\002'))
+_TIME._options = None
+_HEADER.fields_by_name['frame_id']._options = None
+_HEADER._options = None
+_JOINTTRAJECTORYPOINT.fields_by_name['positions']._options = None
+_JOINTTRAJECTORYPOINT.fields_by_name['velocities']._options = None
+_JOINTTRAJECTORYPOINT.fields_by_name['accelerations']._options = None
+_JOINTTRAJECTORYPOINT.fields_by_name['effort']._options = None
+_JOINTTRAJECTORYPOINT._options = None
+_JOINTTRAJECTORY._options = None
 # @@protoc_insertion_point(module_scope)

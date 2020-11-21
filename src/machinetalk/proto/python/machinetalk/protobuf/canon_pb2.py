@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -23,10 +22,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/canon.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n machinetalk/protobuf/canon.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\x1a machinetalk/protobuf/types.proto\x1a#machinetalk/protobuf/emcclass.proto\x1a\"machinetalk/protobuf/motcmds.proto\"l\n\x10\x45mc_Traj_Set_G5x\x12$\n\x06origin\x18\n \x02(\x0b\x32\x14.machinetalk.EmcPose\x12+\n\tg5x_index\x18\x14 \x02(\x0e\x32\x18.machinetalk.OriginIndex:\x05\x92?\x02Hd\"?\n\x10\x45mc_Traj_Set_G92\x12$\n\x06origin\x18\n \x02(\x0b\x32\x14.machinetalk.EmcPose:\x05\x92?\x02He\"0\n\x15\x45mc_Traj_Set_Rotation\x12\x10\n\x08rotation\x18\n \x02(\x01:\x05\x92?\x02Hf\"\xbd\x01\n\x14\x45mc_Traj_Linear_Move\x12%\n\x04type\x18\n \x02(\x0e\x32\x17.machinetalk.MotionType\x12!\n\x03\x65nd\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12\x0b\n\x03vel\x18\x1e \x02(\x01\x12\x12\n\nini_maxvel\x18( \x02(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x32 \x02(\x01\x12\x11\n\tfeed_mode\x18< \x02(\x08\x12\x13\n\x0bindexrotary\x18\x46 \x02(\x05:\x05\x92?\x02Hg\"\xa3\x01\n\x0e\x45mc_Traj_Probe\x12%\n\x04type\x18\n \x02(\x0e\x32\x17.machinetalk.MotionType\x12!\n\x03pos\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12\x0b\n\x03vel\x18\x1e \x02(\x01\x12\x12\n\nini_maxvel\x18( \x02(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x32 \x02(\x01\x12\x12\n\nprobe_type\x18< \x02(\r:\x05\x92?\x02Hh\"\x8c\x02\n\x16\x45mc_Traj_Circular_Move\x12%\n\x04type\x18\n \x02(\x0e\x32\x17.machinetalk.MotionType\x12!\n\x03\x65nd\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12(\n\x06\x63\x65nter\x18\x19 \x02(\x0b\x32\x18.machinetalk.PmCartesian\x12(\n\x06normal\x18\x1b \x02(\x0b\x32\x18.machinetalk.PmCartesian\x12\x0b\n\x03vel\x18\x1e \x02(\x01\x12\x12\n\nini_maxvel\x18( \x02(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x32 \x02(\x01\x12\x11\n\tfeed_mode\x18< \x02(\x08\x12\x0c\n\x04turn\x18\x46 \x02(\x05:\x05\x92?\x02Hi\"l\n\x12\x45mc_Traj_Rigid_Tap\x12!\n\x03pos\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12\x0b\n\x03vel\x18\x1e \x02(\x01\x12\x12\n\nini_maxvel\x18( \x02(\x01\x12\x0b\n\x03\x61\x63\x63\x18\x32 \x02(\x01:\x05\x92?\x02Hj\"`\n\x16\x45mc_Traj_Set_Term_Cond\x12,\n\x04\x63ond\x18\n \x02(\x0e\x32\x1e.machinetalk.TermConditionType\x12\x11\n\ttolerance\x18\x14 \x02(\x01:\x05\x92?\x02Hk\"U\n\x18\x45mc_Traj_Set_Spindlesync\x12\x1b\n\x13\x66\x65\x65\x64_per_revolution\x18\n \x02(\x01\x12\x15\n\rvelocity_mode\x18\x14 \x02(\x08:\x05\x92?\x02Hl\"&\n\x0e\x45mc_Traj_Delay\x12\r\n\x05\x64\x65lay\x18\n \x02(\x01:\x05\x92?\x02Hm\"P\n\x0e\x45mc_Spindle_On\x12\x10\n\x05speed\x18\n \x02(\x01:\x01\x30\x12\x11\n\x06\x66\x61\x63tor\x18\x14 \x02(\x01:\x01\x30\x12\x12\n\x07xoffset\x18\x1e \x02(\x01:\x01\x30:\x05\x92?\x02Hn\"J\n\x11\x45mc_Spindle_Speed\x12\r\n\x05speed\x18\n \x02(\x01\x12\x0e\n\x06\x66\x61\x63tor\x18\x14 \x02(\x01\x12\x0f\n\x07xoffset\x18\x1e \x02(\x01:\x05\x92?\x02Ho\"[\n\x12\x45mc_Spindle_Orient\x12\x13\n\x0borientation\x18\n \x02(\x01\x12)\n\x04mode\x18\x14 \x02(\x0e\x32\x1b.machinetalk.CanonDirection:\x05\x92?\x02Hp\":\n Emc_Spindle_Wait_Orient_Complete\x12\x0f\n\x07timeout\x18\n \x02(\x01:\x05\x92?\x02Hq\"\xb0\x01\n\x13\x45mc_Tool_Set_Offset\x12\x0e\n\x06pocket\x18\n \x02(\x05\x12\x0e\n\x06toolno\x18\x0f \x02(\x05\x12$\n\x06offset\x18\x14 \x02(\x0b\x32\x14.machinetalk.EmcPose\x12\x10\n\x08\x64iameter\x18\x1e \x02(\x01\x12\x12\n\nfrontangle\x18( \x02(\x01\x12\x11\n\tbackangle\x18\x32 \x02(\x01\x12\x13\n\x0borientation\x18< \x02(\x05:\x05\x92?\x02Hr\"B\n\x13\x45mc_Traj_Set_Offset\x12$\n\x06offset\x18\n \x02(\x0b\x32\x14.machinetalk.EmcPose:\x05\x92?\x02Hs\"7\n\x10\x45mc_Tool_Prepare\x12\x0e\n\x06pocket\x18\n \x02(\x05\x12\x0c\n\x04tool\x18\x14 \x02(\x05:\x05\x92?\x02Ht\"*\n\x13\x45mc_Tool_Set_Number\x12\x0c\n\x04tool\x18\n \x02(\x05:\x05\x92?\x02Hu\"-\n\x16\x45mc_Traj_Set_Fo_Enable\x12\x0c\n\x04mode\x18\n \x02(\x08:\x05\x92?\x02Hv\"-\n\x16\x45mc_Traj_Set_So_Enable\x12\x0c\n\x04mode\x18\n \x02(\x08:\x05\x92?\x02Hw\"-\n\x16\x45mc_Traj_Set_Fh_Enable\x12\x0c\n\x04mode\x18\n \x02(\x08:\x05\x92?\x02Hx\",\n\x13\x45mc_Motion_Adaptive\x12\x0e\n\x06status\x18\n \x02(\x08:\x05\x92?\x02Hy\":\n\x14\x45mc_Operator_Display\x12\n\n\x02id\x18\n \x02(\x05\x12\x0f\n\x07\x64isplay\x18\x14 \x02(\t:\x05\x92?\x02Hz\"4\n\x11\x45mc_Operator_Text\x12\n\n\x02id\x18\n \x02(\x05\x12\x0c\n\x04text\x18\x14 \x02(\t:\x05\x92?\x02H{\"6\n\x12\x45mc_Operator_Error\x12\n\n\x02id\x18\n \x02(\x05\x12\r\n\x05\x65rror\x18\x14 \x02(\t:\x05\x92?\x02H|\"T\n\x13\x45mc_Motion_Set_Dout\x12\r\n\x05index\x18\n \x02(\r\x12\r\n\x05start\x18\x14 \x02(\x08\x12\x0b\n\x03\x65nd\x18\x1e \x02(\x08\x12\x0b\n\x03now\x18( \x02(\x08:\x05\x92?\x02H}\"T\n\x13\x45mc_Motion_Set_Aout\x12\r\n\x05index\x18\n \x02(\r\x12\r\n\x05start\x18\x14 \x02(\x01\x12\x0b\n\x03\x65nd\x18\x1e \x02(\x01\x12\x0b\n\x03now\x18( \x02(\x08:\x05\x92?\x02H~\"\x91\x01\n\x12\x45mc_Aux_Input_Wait\x12\r\n\x05index\x18\n \x02(\r\x12*\n\ninput_type\x18\x14 \x02(\x0e\x32\x16.machinetalk.InputType\x12(\n\twait_type\x18\x1e \x02(\x0e\x32\x15.machinetalk.WaitType\x12\x0f\n\x07timeout\x18( \x02(\x01:\x05\x92?\x02H\x7f\",\n\x14\x45mc_Exec_Plugin_Ca1l\x12\x0c\n\x04\x63\x61ll\x18\x14 \x02(\x0c:\x06\x92?\x03H\x80\x01\"*\n\x12\x45mc_Io_Plugin_Call\x12\x0c\n\x04\x63\x61ll\x18\x14 \x02(\x0c:\x06\x92?\x03H\x81\x01')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,machinetalk_dot_protobuf_dot_types__pb2.DESCRIPTOR,machinetalk_dot_protobuf_dot_emcclass__pb2.DESCRIPTOR,machinetalk_dot_protobuf_dot_motcmds__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -44,21 +43,21 @@ _EMC_TRAJ_SET_G5X = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='g5x_index', full_name='machinetalk.Emc_Traj_Set_G5x.g5x_index', index=1,
       number=20, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hd')),
+  serialized_options=_b('\222?\002Hd'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -82,14 +81,14 @@ _EMC_TRAJ_SET_G92 = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002He')),
+  serialized_options=_b('\222?\002He'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -113,14 +112,14 @@ _EMC_TRAJ_SET_ROTATION = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hf')),
+  serialized_options=_b('\222?\002Hf'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -144,56 +143,56 @@ _EMC_TRAJ_LINEAR_MOVE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='machinetalk.Emc_Traj_Linear_Move.end', index=1,
       number=20, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='vel', full_name='machinetalk.Emc_Traj_Linear_Move.vel', index=2,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='ini_maxvel', full_name='machinetalk.Emc_Traj_Linear_Move.ini_maxvel', index=3,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acc', full_name='machinetalk.Emc_Traj_Linear_Move.acc', index=4,
       number=50, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='feed_mode', full_name='machinetalk.Emc_Traj_Linear_Move.feed_mode', index=5,
       number=60, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='indexrotary', full_name='machinetalk.Emc_Traj_Linear_Move.indexrotary', index=6,
       number=70, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hg')),
+  serialized_options=_b('\222?\002Hg'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -217,49 +216,49 @@ _EMC_TRAJ_PROBE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='pos', full_name='machinetalk.Emc_Traj_Probe.pos', index=1,
       number=20, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='vel', full_name='machinetalk.Emc_Traj_Probe.vel', index=2,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='ini_maxvel', full_name='machinetalk.Emc_Traj_Probe.ini_maxvel', index=3,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acc', full_name='machinetalk.Emc_Traj_Probe.acc', index=4,
       number=50, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='probe_type', full_name='machinetalk.Emc_Traj_Probe.probe_type', index=5,
       number=60, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hh')),
+  serialized_options=_b('\222?\002Hh'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -283,70 +282,70 @@ _EMC_TRAJ_CIRCULAR_MOVE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='machinetalk.Emc_Traj_Circular_Move.end', index=1,
       number=20, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='center', full_name='machinetalk.Emc_Traj_Circular_Move.center', index=2,
       number=25, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='normal', full_name='machinetalk.Emc_Traj_Circular_Move.normal', index=3,
       number=27, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='vel', full_name='machinetalk.Emc_Traj_Circular_Move.vel', index=4,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='ini_maxvel', full_name='machinetalk.Emc_Traj_Circular_Move.ini_maxvel', index=5,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acc', full_name='machinetalk.Emc_Traj_Circular_Move.acc', index=6,
       number=50, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='feed_mode', full_name='machinetalk.Emc_Traj_Circular_Move.feed_mode', index=7,
       number=60, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='turn', full_name='machinetalk.Emc_Traj_Circular_Move.turn', index=8,
       number=70, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hi')),
+  serialized_options=_b('\222?\002Hi'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -370,35 +369,35 @@ _EMC_TRAJ_RIGID_TAP = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='vel', full_name='machinetalk.Emc_Traj_Rigid_Tap.vel', index=1,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='ini_maxvel', full_name='machinetalk.Emc_Traj_Rigid_Tap.ini_maxvel', index=2,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acc', full_name='machinetalk.Emc_Traj_Rigid_Tap.acc', index=3,
       number=50, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hj')),
+  serialized_options=_b('\222?\002Hj'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -422,21 +421,21 @@ _EMC_TRAJ_SET_TERM_COND = _descriptor.Descriptor(
       has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='tolerance', full_name='machinetalk.Emc_Traj_Set_Term_Cond.tolerance', index=1,
       number=20, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hk')),
+  serialized_options=_b('\222?\002Hk'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -460,21 +459,21 @@ _EMC_TRAJ_SET_SPINDLESYNC = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='velocity_mode', full_name='machinetalk.Emc_Traj_Set_Spindlesync.velocity_mode', index=1,
       number=20, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hl')),
+  serialized_options=_b('\222?\002Hl'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -498,14 +497,14 @@ _EMC_TRAJ_DELAY = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hm')),
+  serialized_options=_b('\222?\002Hm'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -529,28 +528,28 @@ _EMC_SPINDLE_ON = _descriptor.Descriptor(
       has_default_value=True, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='factor', full_name='machinetalk.Emc_Spindle_On.factor', index=1,
       number=20, type=1, cpp_type=5, label=2,
       has_default_value=True, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='xoffset', full_name='machinetalk.Emc_Spindle_On.xoffset', index=2,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=True, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hn')),
+  serialized_options=_b('\222?\002Hn'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -574,28 +573,28 @@ _EMC_SPINDLE_SPEED = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='factor', full_name='machinetalk.Emc_Spindle_Speed.factor', index=1,
       number=20, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='xoffset', full_name='machinetalk.Emc_Spindle_Speed.xoffset', index=2,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Ho')),
+  serialized_options=_b('\222?\002Ho'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -619,21 +618,21 @@ _EMC_SPINDLE_ORIENT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='mode', full_name='machinetalk.Emc_Spindle_Orient.mode', index=1,
       number=20, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hp')),
+  serialized_options=_b('\222?\002Hp'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -657,14 +656,14 @@ _EMC_SPINDLE_WAIT_ORIENT_COMPLETE = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hq')),
+  serialized_options=_b('\222?\002Hq'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -688,56 +687,56 @@ _EMC_TOOL_SET_OFFSET = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='toolno', full_name='machinetalk.Emc_Tool_Set_Offset.toolno', index=1,
       number=15, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='offset', full_name='machinetalk.Emc_Tool_Set_Offset.offset', index=2,
       number=20, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='diameter', full_name='machinetalk.Emc_Tool_Set_Offset.diameter', index=3,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='frontangle', full_name='machinetalk.Emc_Tool_Set_Offset.frontangle', index=4,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='backangle', full_name='machinetalk.Emc_Tool_Set_Offset.backangle', index=5,
       number=50, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='orientation', full_name='machinetalk.Emc_Tool_Set_Offset.orientation', index=6,
       number=60, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hr')),
+  serialized_options=_b('\222?\002Hr'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -761,14 +760,14 @@ _EMC_TRAJ_SET_OFFSET = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hs')),
+  serialized_options=_b('\222?\002Hs'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -792,21 +791,21 @@ _EMC_TOOL_PREPARE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='tool', full_name='machinetalk.Emc_Tool_Prepare.tool', index=1,
       number=20, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Ht')),
+  serialized_options=_b('\222?\002Ht'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -830,14 +829,14 @@ _EMC_TOOL_SET_NUMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hu')),
+  serialized_options=_b('\222?\002Hu'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -861,14 +860,14 @@ _EMC_TRAJ_SET_FO_ENABLE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hv')),
+  serialized_options=_b('\222?\002Hv'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -892,14 +891,14 @@ _EMC_TRAJ_SET_SO_ENABLE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hw')),
+  serialized_options=_b('\222?\002Hw'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -923,14 +922,14 @@ _EMC_TRAJ_SET_FH_ENABLE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hx')),
+  serialized_options=_b('\222?\002Hx'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -954,14 +953,14 @@ _EMC_MOTION_ADAPTIVE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hy')),
+  serialized_options=_b('\222?\002Hy'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -985,21 +984,21 @@ _EMC_OPERATOR_DISPLAY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='display', full_name='machinetalk.Emc_Operator_Display.display', index=1,
       number=20, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hz')),
+  serialized_options=_b('\222?\002Hz'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1023,21 +1022,21 @@ _EMC_OPERATOR_TEXT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='text', full_name='machinetalk.Emc_Operator_Text.text', index=1,
       number=20, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H{')),
+  serialized_options=_b('\222?\002H{'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1061,21 +1060,21 @@ _EMC_OPERATOR_ERROR = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='error', full_name='machinetalk.Emc_Operator_Error.error', index=1,
       number=20, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H|')),
+  serialized_options=_b('\222?\002H|'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1099,35 +1098,35 @@ _EMC_MOTION_SET_DOUT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='start', full_name='machinetalk.Emc_Motion_Set_Dout.start', index=1,
       number=20, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='machinetalk.Emc_Motion_Set_Dout.end', index=2,
       number=30, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='now', full_name='machinetalk.Emc_Motion_Set_Dout.now', index=3,
       number=40, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H}')),
+  serialized_options=_b('\222?\002H}'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1151,35 +1150,35 @@ _EMC_MOTION_SET_AOUT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='start', full_name='machinetalk.Emc_Motion_Set_Aout.start', index=1,
       number=20, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='machinetalk.Emc_Motion_Set_Aout.end', index=2,
       number=30, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='now', full_name='machinetalk.Emc_Motion_Set_Aout.now', index=3,
       number=40, type=8, cpp_type=7, label=2,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H~')),
+  serialized_options=_b('\222?\002H~'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1203,35 +1202,35 @@ _EMC_AUX_INPUT_WAIT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='input_type', full_name='machinetalk.Emc_Aux_Input_Wait.input_type', index=1,
       number=20, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='wait_type', full_name='machinetalk.Emc_Aux_Input_Wait.wait_type', index=2,
       number=30, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='timeout', full_name='machinetalk.Emc_Aux_Input_Wait.timeout', index=3,
       number=40, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H\177')),
+  serialized_options=_b('\222?\002H\177'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1255,14 +1254,14 @@ _EMC_EXEC_PLUGIN_CA1L = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\200\001')),
+  serialized_options=_b('\222?\003H\200\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1286,14 +1285,14 @@ _EMC_IO_PLUGIN_CALL = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\201\001')),
+  serialized_options=_b('\222?\003H\201\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -1351,6 +1350,7 @@ DESCRIPTOR.message_types_by_name['Emc_Motion_Set_Aout'] = _EMC_MOTION_SET_AOUT
 DESCRIPTOR.message_types_by_name['Emc_Aux_Input_Wait'] = _EMC_AUX_INPUT_WAIT
 DESCRIPTOR.message_types_by_name['Emc_Exec_Plugin_Ca1l'] = _EMC_EXEC_PLUGIN_CA1L
 DESCRIPTOR.message_types_by_name['Emc_Io_Plugin_Call'] = _EMC_IO_PLUGIN_CALL
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Emc_Traj_Set_G5x = _reflection.GeneratedProtocolMessageType('Emc_Traj_Set_G5x', (_message.Message,), dict(
   DESCRIPTOR = _EMC_TRAJ_SET_G5X,
@@ -1563,64 +1563,34 @@ Emc_Io_Plugin_Call = _reflection.GeneratedProtocolMessageType('Emc_Io_Plugin_Cal
 _sym_db.RegisterMessage(Emc_Io_Plugin_Call)
 
 
-_EMC_TRAJ_SET_G5X.has_options = True
-_EMC_TRAJ_SET_G5X._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hd'))
-_EMC_TRAJ_SET_G92.has_options = True
-_EMC_TRAJ_SET_G92._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002He'))
-_EMC_TRAJ_SET_ROTATION.has_options = True
-_EMC_TRAJ_SET_ROTATION._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hf'))
-_EMC_TRAJ_LINEAR_MOVE.has_options = True
-_EMC_TRAJ_LINEAR_MOVE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hg'))
-_EMC_TRAJ_PROBE.has_options = True
-_EMC_TRAJ_PROBE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hh'))
-_EMC_TRAJ_CIRCULAR_MOVE.has_options = True
-_EMC_TRAJ_CIRCULAR_MOVE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hi'))
-_EMC_TRAJ_RIGID_TAP.has_options = True
-_EMC_TRAJ_RIGID_TAP._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hj'))
-_EMC_TRAJ_SET_TERM_COND.has_options = True
-_EMC_TRAJ_SET_TERM_COND._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hk'))
-_EMC_TRAJ_SET_SPINDLESYNC.has_options = True
-_EMC_TRAJ_SET_SPINDLESYNC._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hl'))
-_EMC_TRAJ_DELAY.has_options = True
-_EMC_TRAJ_DELAY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hm'))
-_EMC_SPINDLE_ON.has_options = True
-_EMC_SPINDLE_ON._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hn'))
-_EMC_SPINDLE_SPEED.has_options = True
-_EMC_SPINDLE_SPEED._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Ho'))
-_EMC_SPINDLE_ORIENT.has_options = True
-_EMC_SPINDLE_ORIENT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hp'))
-_EMC_SPINDLE_WAIT_ORIENT_COMPLETE.has_options = True
-_EMC_SPINDLE_WAIT_ORIENT_COMPLETE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hq'))
-_EMC_TOOL_SET_OFFSET.has_options = True
-_EMC_TOOL_SET_OFFSET._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hr'))
-_EMC_TRAJ_SET_OFFSET.has_options = True
-_EMC_TRAJ_SET_OFFSET._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hs'))
-_EMC_TOOL_PREPARE.has_options = True
-_EMC_TOOL_PREPARE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Ht'))
-_EMC_TOOL_SET_NUMBER.has_options = True
-_EMC_TOOL_SET_NUMBER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hu'))
-_EMC_TRAJ_SET_FO_ENABLE.has_options = True
-_EMC_TRAJ_SET_FO_ENABLE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hv'))
-_EMC_TRAJ_SET_SO_ENABLE.has_options = True
-_EMC_TRAJ_SET_SO_ENABLE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hw'))
-_EMC_TRAJ_SET_FH_ENABLE.has_options = True
-_EMC_TRAJ_SET_FH_ENABLE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hx'))
-_EMC_MOTION_ADAPTIVE.has_options = True
-_EMC_MOTION_ADAPTIVE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hy'))
-_EMC_OPERATOR_DISPLAY.has_options = True
-_EMC_OPERATOR_DISPLAY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002Hz'))
-_EMC_OPERATOR_TEXT.has_options = True
-_EMC_OPERATOR_TEXT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H{'))
-_EMC_OPERATOR_ERROR.has_options = True
-_EMC_OPERATOR_ERROR._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H|'))
-_EMC_MOTION_SET_DOUT.has_options = True
-_EMC_MOTION_SET_DOUT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H}'))
-_EMC_MOTION_SET_AOUT.has_options = True
-_EMC_MOTION_SET_AOUT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H~'))
-_EMC_AUX_INPUT_WAIT.has_options = True
-_EMC_AUX_INPUT_WAIT._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\002H\177'))
-_EMC_EXEC_PLUGIN_CA1L.has_options = True
-_EMC_EXEC_PLUGIN_CA1L._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\200\001'))
-_EMC_IO_PLUGIN_CALL.has_options = True
-_EMC_IO_PLUGIN_CALL._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\201\001'))
+_EMC_TRAJ_SET_G5X._options = None
+_EMC_TRAJ_SET_G92._options = None
+_EMC_TRAJ_SET_ROTATION._options = None
+_EMC_TRAJ_LINEAR_MOVE._options = None
+_EMC_TRAJ_PROBE._options = None
+_EMC_TRAJ_CIRCULAR_MOVE._options = None
+_EMC_TRAJ_RIGID_TAP._options = None
+_EMC_TRAJ_SET_TERM_COND._options = None
+_EMC_TRAJ_SET_SPINDLESYNC._options = None
+_EMC_TRAJ_DELAY._options = None
+_EMC_SPINDLE_ON._options = None
+_EMC_SPINDLE_SPEED._options = None
+_EMC_SPINDLE_ORIENT._options = None
+_EMC_SPINDLE_WAIT_ORIENT_COMPLETE._options = None
+_EMC_TOOL_SET_OFFSET._options = None
+_EMC_TRAJ_SET_OFFSET._options = None
+_EMC_TOOL_PREPARE._options = None
+_EMC_TOOL_SET_NUMBER._options = None
+_EMC_TRAJ_SET_FO_ENABLE._options = None
+_EMC_TRAJ_SET_SO_ENABLE._options = None
+_EMC_TRAJ_SET_FH_ENABLE._options = None
+_EMC_MOTION_ADAPTIVE._options = None
+_EMC_OPERATOR_DISPLAY._options = None
+_EMC_OPERATOR_TEXT._options = None
+_EMC_OPERATOR_ERROR._options = None
+_EMC_MOTION_SET_DOUT._options = None
+_EMC_MOTION_SET_AOUT._options = None
+_EMC_AUX_INPUT_WAIT._options = None
+_EMC_EXEC_PLUGIN_CA1L._options = None
+_EMC_IO_PLUGIN_CALL._options = None
 # @@protoc_insertion_point(module_scope)

@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -21,10 +20,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='machinetalk/protobuf/config.proto',
   package='machinetalk',
   syntax='proto2',
+  serialized_options=None,
   serialized_pb=_b('\n!machinetalk/protobuf/config.proto\x12\x0bmachinetalk\x1a!machinetalk/protobuf/nanopb.proto\"V\n\x04\x46ile\x12\x0c\n\x04name\x18\x01 \x02(\t\x12*\n\x08\x65ncoding\x18\x02 \x02(\x0e\x32\x18.machinetalk.FileContent\x12\x0c\n\x04\x62lob\x18\x03 \x01(\x0c:\x06\x92?\x03H\xc8\x01\"\x95\x01\n\x0b\x41pplication\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12*\n\x04type\x18\x03 \x01(\x0e\x32\x1c.machinetalk.ApplicationType\x12\x0e\n\x06weburi\x18\x04 \x01(\t\x12\x1f\n\x04\x66ile\x18\x05 \x03(\x0b\x32\x11.machinetalk.File:\x06\x92?\x03H\xc9\x01\"1\n\nStdoutLine\x12\r\n\x05index\x18\x01 \x02(\x05\x12\x0c\n\x04line\x18\x02 \x01(\t:\x06\x92?\x03H\xca\x01\"Y\n\x0bMachineInfo\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x14\n\x0cmanufacturer\x18\x02 \x01(\t\x12\r\n\x05model\x18\x03 \x01(\t\x12\x0f\n\x07variant\x18\x04 \x01(\t:\x06\x92?\x03H\xcb\x01\"\xc8\x02\n\x08Launcher\x12\r\n\x05index\x18\x01 \x02(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12 \n\x05image\x18\x04 \x01(\x0b\x32\x11.machinetalk.File\x12&\n\x04info\x18\x05 \x01(\x0b\x32\x18.machinetalk.MachineInfo\x12\x0f\n\x07running\x18\x06 \x01(\x08\x12\x13\n\x0bterminating\x18\x07 \x01(\x08\x12\x0f\n\x07\x63ommand\x18\x08 \x01(\t\x12\r\n\x05shell\x18\t \x01(\x08\x12\'\n\x06output\x18\n \x03(\x0b\x32\x17.machinetalk.StdoutLine\x12\x12\n\nreturncode\x18\x0b \x01(\x05\x12\x0f\n\x07workdir\x18\x0c \x01(\t\x12\x10\n\x08priority\x18\r \x01(\r\x12\x12\n\nimportance\x18\x0e \x01(\r:\x06\x92?\x03H\xcc\x01*<\n\x0f\x41pplicationType\x12\x0b\n\x07QT5_QML\x10\x01\x12\x0c\n\x08GLADEVCP\x10\x02\x12\x0e\n\nJAVASCRIPT\x10\x03*&\n\x0b\x46ileContent\x12\r\n\tCLEARTEXT\x10\x01\x12\x08\n\x04ZLIB\x10\x02')
   ,
   dependencies=[machinetalk_dot_protobuf_dot_nanopb__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _APPLICATIONTYPE = _descriptor.EnumDescriptor(
   name='ApplicationType',
@@ -34,19 +33,19 @@ _APPLICATIONTYPE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='QT5_QML', index=0, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='GLADEVCP', index=1, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='JAVASCRIPT', index=2, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=798,
   serialized_end=858,
 )
@@ -61,15 +60,15 @@ _FILECONTENT = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='CLEARTEXT', index=0, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ZLIB', index=1, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=860,
   serialized_end=898,
 )
@@ -97,28 +96,28 @@ _FILE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='encoding', full_name='machinetalk.File.encoding', index=1,
       number=2, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='blob', full_name='machinetalk.File.blob', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\310\001')),
+  serialized_options=_b('\222?\003H\310\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -142,42 +141,42 @@ _APPLICATION = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='description', full_name='machinetalk.Application.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='machinetalk.Application.type', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=1,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='weburi', full_name='machinetalk.Application.weburi', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='file', full_name='machinetalk.Application.file', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\311\001')),
+  serialized_options=_b('\222?\003H\311\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -201,21 +200,21 @@ _STDOUTLINE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='line', full_name='machinetalk.StdoutLine.line', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\312\001')),
+  serialized_options=_b('\222?\003H\312\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -239,35 +238,35 @@ _MACHINEINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='manufacturer', full_name='machinetalk.MachineInfo.manufacturer', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='model', full_name='machinetalk.MachineInfo.model', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='variant', full_name='machinetalk.MachineInfo.variant', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\313\001')),
+  serialized_options=_b('\222?\003H\313\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -291,105 +290,105 @@ _LAUNCHER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='machinetalk.Launcher.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='description', full_name='machinetalk.Launcher.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='image', full_name='machinetalk.Launcher.image', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='info', full_name='machinetalk.Launcher.info', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='running', full_name='machinetalk.Launcher.running', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='terminating', full_name='machinetalk.Launcher.terminating', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='command', full_name='machinetalk.Launcher.command', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='shell', full_name='machinetalk.Launcher.shell', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='output', full_name='machinetalk.Launcher.output', index=9,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='returncode', full_name='machinetalk.Launcher.returncode', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='workdir', full_name='machinetalk.Launcher.workdir', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='priority', full_name='machinetalk.Launcher.priority', index=12,
       number=13, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='importance', full_name='machinetalk.Launcher.importance', index=13,
       number=14, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\314\001')),
+  serialized_options=_b('\222?\003H\314\001'),
   is_extendable=False,
   syntax='proto2',
   extension_ranges=[],
@@ -412,6 +411,7 @@ DESCRIPTOR.message_types_by_name['MachineInfo'] = _MACHINEINFO
 DESCRIPTOR.message_types_by_name['Launcher'] = _LAUNCHER
 DESCRIPTOR.enum_types_by_name['ApplicationType'] = _APPLICATIONTYPE
 DESCRIPTOR.enum_types_by_name['FileContent'] = _FILECONTENT
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 File = _reflection.GeneratedProtocolMessageType('File', (_message.Message,), dict(
   DESCRIPTOR = _FILE,
@@ -449,14 +449,9 @@ Launcher = _reflection.GeneratedProtocolMessageType('Launcher', (_message.Messag
 _sym_db.RegisterMessage(Launcher)
 
 
-_FILE.has_options = True
-_FILE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\310\001'))
-_APPLICATION.has_options = True
-_APPLICATION._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\311\001'))
-_STDOUTLINE.has_options = True
-_STDOUTLINE._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\312\001'))
-_MACHINEINFO.has_options = True
-_MACHINEINFO._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\313\001'))
-_LAUNCHER.has_options = True
-_LAUNCHER._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('\222?\003H\314\001'))
+_FILE._options = None
+_APPLICATION._options = None
+_STDOUTLINE._options = None
+_MACHINEINFO._options = None
+_LAUNCHER._options = None
 # @@protoc_insertion_point(module_scope)
